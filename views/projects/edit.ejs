@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+
+  <title>Project Editing | Simarpreet Singh</title>
+  <meta name="description"
+    content="My name is Simarpreet Singh, and I am a Computer Science and Engineering Student from Chicago, Illinois. I offer freelance web development and am actively looking for software development projects and roles.">
+
+    <link rel="icon" href="/assets/s.png">
+  <link rel="stylesheet" href="/assets/site.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tailwindcss/ui@latest/dist/tailwind-ui.min.css">
+  <script defer src="/assets/site.js"></script>
+  <style>
+    [x-cloak] {
+      display: none;
+    }
+  </style>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Projects</title>
+</head>
+
+<body>
+  <div class="container">
+    <h1 class="mb-4">Edit Project</h1>
+
+    <form action="/projects/<%= project.id %>?_method=PUT" method="POST">
+      <%- include('_form_fields') %>
+    </form>
+  </div>
+</body>
+
+</html>

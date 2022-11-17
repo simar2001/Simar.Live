@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  
+  
+    <title><%= article.title %> | Simarpreet Singh</title>
+    <meta name="description"
+      content="My name is Simarpreet Singh, and I am a Computer Science and Engineering Student from Chicago, Illinois. I offer freelance web development and am actively looking for software development projects and roles.">
+  
+      <link rel="icon" href="/assets/s.png">
+    <link rel="stylesheet" href="/assets/site.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tailwindcss/ui@latest/dist/tailwind-ui.min.css">
+    <script defer src="/assets/site.js"></script>
+    <style>
+      [x-cloak] {
+        display: none;
+      }
+  
+      
+    </style>
+  
+  </head>
+
+<body class="">
+
+
+  <header x-data class="bg-blue-900 text-white">
+    <div class="container py-5 flex items-center">
+
+
+      <a href="/" class="flex items-center transition transform ease-in-out duration-100 hover:scale-105">
+        <span class="w-6 h-6 text-blue-200">
+          <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 172 172" style=" fill:#000000;">
+            <g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt"
+              stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0"
+              font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal">
+              <path d="M0,172v-172h172v172z" fill="none"></path>
+              <g fill="#ffffff">
+                <path
+                  d="M56.76,13.76c-17.43392,0 -31.6845,13.73624 -32.59266,30.94656c6.794,-9.86592 17.9503,-16.4733 30.65766,-17.0925c0.6364,-0.06192 1.2814,-0.09406 1.935,-0.09406h27.07656h53.76344v-13.76zM56.76,34.4c-18.01872,0 -32.68,14.66128 -32.68,32.68c0,18.01872 14.66128,32.68 32.68,32.68h55.04c12.32896,0 22.36,10.03104 22.36,22.36c0,12.32896 -10.03104,22.36 -22.36,22.36h-87.72v13.76h87.72c19.9176,0 36.12,-16.2024 36.12,-36.12c0,-19.9176 -16.2024,-36.12 -36.12,-36.12h-55.04c-10.43352,0 -18.92,-8.48992 -18.92,-18.92c0,-10.43008 8.48648,-18.92 18.92,-18.92h80.84v-13.76zM45.9361,61.93344c-0.75336,1.5652 -1.2161,3.2924 -1.2161,5.14656c0,6.6392 5.4008,12.04 12.04,12.04h25.35656h14.32437h15.35906c15.04656,0 28.28723,7.78069 35.97219,19.51797c-1.45856,-18.58976 -17.01435,-33.27797 -35.97219,-33.27797h-55.04c-4.0248,0 -7.75198,-1.27312 -10.8239,-3.42656zM126.68203,118.12235c-3.956,3.5432 -9.16475,5.71765 -14.88203,5.71765h-87.72v13.76h29.41469h58.30531c8.53464,0 15.48,-6.94536 15.48,-15.48c0,-1.39664 -0.24365,-2.71453 -0.59797,-3.99765z">
+                </path>
+              </g>
+            </g>
+          </svg>
+        </span>
+      </a>
+
+
+      <nav class="ml-auto space-x-4 hidden md:block">
+
+
+        
+
+
+
+        <!-- <a
+          class="text-sm font-mono transition-colors duration-200 hover:text-white text-blue-200"
+          href="/instruction/"
+        >
+          Instruction
+        </a>
+      
+        
+        
+        <a
+          class="text-sm font-mono transition-colors duration-200 hover:text-white text-blue-200"
+          href="/work/"
+        >
+          Work
+        </a> -->
+      </nav>
+
+
+      <nav class="ml-auto md:ml-20 flex space-x-4 text-blue-300">
+
+        <a class="px-4 hidden text-sm md:block font-mono transition-colors duration-200 hover:text-white text-blue-200" href="/about">
+          About
+        </a>
+
+        <a class="px-4 hidden text-sm md:block font-mono transition-colors duration-200 hover:text-white text-blue-200" href="/projectspage">
+          Projects
+        </a>
+
+        <a class="px-4 hidden text-sm md:block font-mono transition-colors duration-200 hover:text-white text-blue-200" href="/blog">
+          Blog
+        </a>
+
+        <a class="pl-4 hidden text-sm md:block font-mono transition-colors duration-200 hover:text-white text-blue-200" href="/contact">
+          Contact
+        </a>
+
+        <button @click="$store.nav.toggle()" class="w-6 h-6 md:hidden">
+          <span x-show="!$store.nav.isOpen">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+
+          </span>
+          <span x-show="$store.nav.isOpen">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+
+          </span>
+        </button>
+      </nav>
+
+    </div>
+
+    <div class="container">
+      <div class="h-px bg-blue-200" style="opacity: 0.2;"></div>
+    </div>
+
+    <nav class="container md:hidden" x-show="$store.nav.isOpen" x-cloak x-transition>
+
+
+      <a class="block py-4 font-mono text-sm tracking-tight text-white" href="/about">
+        About
+      </a>
+      <div class="h-px bg-blue-200" style="opacity: 0.2;"></div>
+
+
+      <a class="block py-4 font-mono text-sm tracking-tight text-white" href="/projectspage">
+        Projects
+      </a>
+      <div class="h-px bg-blue-200" style="opacity: 0.2;"></div>
+
+
+      <a class="block py-4 font-mono text-sm tracking-tight text-white" href="/blog">
+        Blog
+      </a>
+      <div class="h-px bg-blue-200" style="opacity: 0.2;"></div>
+
+      <a class="block py-4 font-mono text-sm tracking-tight text-white" href="/contact">
+        Contact
+      </a>
+
+    </nav>
+
+  </header>
+  <main>
+    
+    <script src="app.js"></script>
+    <section class="text-gray-600 body-font">
+      
+      <div class="container px-5 py-18 mx-auto flex flex-col">
+        <a class="text-blue-500 inline-flex items-center transition transform ease-in-out duration-100 hover:scale-105 pt-10"href="/blog" > 
+          <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
+          <path d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+        </svg> <tag class="px-2">Back to Blog</tag>
+        </a>
+        <div class="flex flex-col">
+          <div class="flex flex-wrap sm:flex-row flex-col mb-12 mt-10">
+            <h1 class="sm:w-full text-gray-900 font-mono text-4xl mb-2 sm:mb-0 font-mono">Blog | <%= article.category %> | <b><%= article.title %></b></h1>
+          </div>
+        </div>
+        <div class="lg:w-full mx-auto">
+          <div class="rounded-lg h-60 overflow-hidden">
+            <img alt="content" class="object-cover object-center h-60 w-full" src="<%= article.imageUrl %>">
+          </div>
+          <div class="flex flex-col sm:flex-row mt-10">
+            <div class="sm:w-1/3 text-center sm:pr-8 sm:py-8">
+              <div class="rounded-full ring-black ring-4 ring-opacity-5 inline-flex items-center justify-center">
+                <img src="/assets/Me.png">
+              </div>
+              <div class="flex flex-col items-center text-center justify-center">
+                <div class="w-12 h-1 bg-blue-700 rounded mt-2 mb-4"></div>
+                <p class="text-base font-mono"><%= article.createdAt.toLocaleDateString('zh-Hans-CN') %></p>
+              </div>
+            </div>
+            <div class="sm:w-2/3 sm:pl-8 sm:py-8 sm:border-l border-gray-200 sm:border-t-0 border-t mt-4 pt-4 sm:mt-0 text-center sm:text-left">
+              <div class="prose">
+                <%- article.sanitizedHtml %>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer
+    class="container text-gray-600 mb-6 mt-8 sm:mt-16 text-sm flex flex-wrap justify-center items-center font-mono">
+    <span x-data="" x-text="`Simarpreet Singh | © ${new Date().getFullYear()}`"></span>
+    <div class="w-full flex items-center justify-center space-x-3 mt-4 md:w-auto md:mt-0 md:ml-6">
+      <a aria-label="instagram profile link" href="https://www.instagram.com/simarprs/" target="_blank" rel="noopener"
+        class="w-5 h-5 text-gray-500 transition transform ease-in-out duration-100 hover:scale-105">
+        <svg aria-hidden="true" focusable="false" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+          fill="currentColor">
+          <path
+            d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+        </svg>
+
+      </a>
+      <a aria-label="github profile link" href="https://github.com/simar2001" target="_blank" rel="noopener"
+        class="w-5 h-5 text-gray-500 transition transform ease-in-out duration-100 hover:scale-105">
+        <svg aria-hidden="true" focusable="false" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512">
+          <path fill="currentColor"
+            d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z" />
+        </svg>
+
+      </a>
+
+      <a aria-label="linkedin profile link" href="https://www.linkedin.com/in/simarpreet-singh-84a599190/"
+        target="_blank" rel="noopener" class="w-5 h-5 text-gray-500 transition transform ease-in-out duration-100 hover:scale-105">
+        <svg aria-hidden="true" focusable="false" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+          <path fill="currentColor"
+            d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z" />
+        </svg>
+
+      </a>
+
+      <a aria-label="email" href="mailto:simar@umich.edu" class="w-5 h-5 text-gray-500 transition transform ease-in-out duration-100 hover:scale-105">
+        <svg width="24" height="24" aria-hidden="true" focusable="false" role="img" xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 24 24" fill="currentColor">
+          <path
+            d="M22.288 21h-20.576c-.945 0-1.712-.767-1.712-1.712v-13.576c0-.945.767-1.712 1.712-1.712h20.576c.945 0 1.712.767 1.712 1.712v13.576c0 .945-.767 1.712-1.712 1.712zm-10.288-6.086l-9.342-6.483-.02 11.569h18.684v-11.569l-9.322 6.483zm8.869-9.914h-17.789l8.92 6.229s6.252-4.406 8.869-6.229z" />
+        </svg>
+
+      </a>
+
+      </a>
+
+    </div>
+  </footer>
+
+</body>
+
+</html>

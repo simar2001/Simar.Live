@@ -1,0 +1,20 @@
+  
+<div class="form-group">
+    <label for="title">Title</label>
+    <input required value="<%= article.title %>" type="text" name="title" id="title" class="w-full">
+  </div>
+  <div class="form-group">
+    <label for="category">Category</label>
+    <textarea name="category" id="category" class="w-full"><%= article.category %></textarea>
+  </div>
+  <div class="form-group">
+    <label for="imageurl">Image Url</label>
+    <textarea name="imageurl" id="imageurl" class="w-full"><%= article.imageUrl %></textarea>
+  </div>
+  <div class="form-group">
+    <label for="markdown">Markdown</label>
+    <textarea required name="markdown" id="markdown" class="w-full h-30"><%= article.markdown %></textarea>
+  </div>
+  
+  <a href="/blog" class="btn btn-secondary">Cancel</a>
+  <button type="submit" class="btn btn-primary">Save</button>
